@@ -467,7 +467,7 @@
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
 
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzxrYQy2HUAoCiwOjE_a9MaExEYas1azx20QfWmw_dp2ZMHjlB8Ek6bg1GN78rWG1W0ew/exec";
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzbBpbM3vhOSiIbiHa4KlOxQZmEPq5Hw-y8Pvicn86or3FCen0PgiZboRgYG0nL-2qFCA/exec";
 
   const form = document.getElementById("leadForm");
   if (form) {
