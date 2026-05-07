@@ -37,10 +37,12 @@
     }
     .nav{
       display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0; gap:14px;
+      padding:14px 0;
+      gap:14px;
     }
     .brand{
-      display:flex; align-items:center; gap:12px; min-width:220px;
+      display:flex; align-items:center; gap:12px;
+      min-width: 220px;
     }
     .logo{
       width:40px; height:40px; border-radius:12px;
@@ -51,9 +53,7 @@
     }
     .brand .name{font-weight:850; letter-spacing:.2px}
     .brand .sub{color:var(--muted); font-size:12px; margin-top:2px}
-    .menu{
-      display:flex; gap:16px; flex-wrap:wrap; justify-content:flex-end;
-    }
+    .menu{display:flex; gap:16px; flex-wrap:wrap; justify-content:flex-end;}
     .menu a{
       color:var(--muted);
       padding:10px 10px;
@@ -63,7 +63,7 @@
       font-size:14px;
     }
     .menu a:hover{background:rgba(255,255,255,.06); color:var(--text)}
-    .cta{display:flex; align-items:center; gap:10px}
+    .cta{display:flex; align-items:center; gap:10px;}
     .btn{
       border:1px solid rgba(255,255,255,.14);
       background: rgba(255,255,255,.04);
@@ -84,14 +84,18 @@
     }
     .btn-accent:hover{background: linear-gradient(135deg, rgba(255,122,24,1), rgba(255,122,24,.8))}
     main section{padding:56px 0}
-    .hero{padding:42px 0 14px}
+    .hero{padding:42px 0 14px;}
     .hero-grid{
       display:grid;
       grid-template-columns: 1.1fr .9fr;
       gap:22px;
       align-items:stretch;
     }
-    @media (max-width: 900px){ .hero-grid{grid-template-columns:1fr} .brand{min-width:auto} .menu{display:none} }
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .brand{min-width:auto}
+      .menu{display:none}
+    }
     .hero-card{
       background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
       border:1px solid var(--border);
@@ -121,21 +125,23 @@
       letter-spacing:-.6px;
     }
     @media (max-width: 520px){ h1{font-size:34px} }
-    .lead{color:var(--muted); font-size:16px; margin:0 0 18px; max-width:62ch}
+    .lead{color:var(--muted); font-size:16px; margin:0 0 18px; max-width: 62ch}
     .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
     .stats{
-      display:grid; grid-template-columns: repeat(2, 1fr);
-      gap:12px; margin-top:18px;
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:12px;
+      margin-top:18px;
     }
     .stat{
       background: rgba(255,255,255,.03);
       border:1px solid var(--border);
-      border-radius:16px;
+      border-radius: 16px;
       padding:14px;
     }
     .stat .num{font-weight:950; font-size:20px}
     .stat .lbl{color:var(--muted); font-size:13px; margin-top:4px}
-    .side{display:flex; flex-direction:column; gap:14px}
+    .side{display:flex; flex-direction:column; gap:14px;}
     .panel{
       background: rgba(255,255,255,.03);
       border:1px solid var(--border);
@@ -146,17 +152,14 @@
     .panel h3{margin:0 0 8px; font-size:18px}
     .list{margin:0; padding-left:18px; color:var(--muted)}
     .list li{margin:8px 0}
-    .grid-3{
-      display:grid; grid-template-columns: repeat(3, 1fr);
-      gap:14px;
-    }
+    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px;}
     @media (max-width: 900px){ .grid-3{grid-template-columns:1fr} }
     .card{
       background: rgba(255,255,255,.03);
       border:1px solid var(--border);
       border-radius: var(--radius);
       padding:18px;
-      min-height:140px;
+      min-height: 140px;
     }
     .card .title{font-weight:900; margin-bottom:8px}
     .card .desc{color:var(--muted); margin:0}
@@ -164,9 +167,13 @@
       display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
       margin-bottom:18px;
     }
-    .section-title h2{margin:0; font-size:28px; letter-spacing:-.3px}
-    .section-title p{margin:0; color:var(--muted); max-width:62ch}
-    .steps{display:grid; grid-template-columns: repeat(4, 1fr); gap:14px}
+    .section-title h2{
+      margin:0;
+      font-size:28px;
+      letter-spacing:-.3px;
+    }
+    .section-title p{margin:0; color:var(--muted); max-width: 62ch}
+    .steps{display:grid; grid-template-columns: repeat(4, 1fr); gap:14px;}
     @media (max-width: 900px){ .steps{grid-template-columns:1fr} }
     .step{
       background: rgba(255,255,255,.03);
@@ -198,18 +205,18 @@
       align-items:start;
     }
     @media (max-width: 900px){ .contact-grid{grid-template-columns:1fr} }
-    form{display:grid; gap:10px; margin-top:10px}
+    form{display:grid; gap:10px; margin-top:10px;}
     input, textarea{
       width:100%;
       padding:12px 12px;
-      border-radius:14px;
+      border-radius: 14px;
       border:1px solid rgba(255,255,255,.14);
       background: rgba(0,0,0,.18);
-      color:var(--text);
+      color: var(--text);
       outline:none;
       font-size:15px;
     }
-    textarea{min-height:110px; resize:vertical}
+    textarea{min-height:110px; resize: vertical}
     input::placeholder, textarea::placeholder{color: rgba(168,179,214,.7)}
     .fineprint{color:var(--muted); font-size:12px; margin-top:6px}
     .footer{
@@ -221,6 +228,12 @@
     .footer .row{
       display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
       align-items:center;
+    }
+    .form-status{
+      min-height: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 2px;
     }
   </style>
 </head>
@@ -421,7 +434,7 @@
       <div class="section-title">
         <div>
           <h2>Контакты и заявка</h2>
-          <p>Заполните форму — мы свяжемся с вами.</p>
+          <p>Заполните форму — заявка сразу отправится в Telegram бота TASVER.</p>
         </div>
       </div>
 
@@ -447,8 +460,8 @@
 
             <button class="btn btn-accent" type="submit">Отправить</button>
             <div class="fineprint">Нажимая “Отправить”, вы даёте согласие на обработку данных.</div>
+            <div class="form-status" id="formStatus"></div>
           </form>
-
         </div>
       </div>
     </div>
@@ -467,37 +480,38 @@
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
 
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzbBpbM3vhOSiIbiHa4KlOxQZmEPq5Hw-y8Pvicn86or3FCen0PgiZboRgYG0nL-2qFCA/exec";
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzIkFId0ivjrZjrlU9rI7OEYXjN2AuDTiIhW5oqMgt-MOdHWrsoPIJe-tAtgKGW9It9IQ/exec";
 
   const form = document.getElementById("leadForm");
-  if (form) {
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
+  const statusEl = document.getElementById("formStatus");
 
-      const data = {
-        name: form.name.value.trim(),
-        phone: form.phone.value.trim(),
-        email: form.email.value.trim(),
-        message: form.message.value.trim()
-      };
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    statusEl.textContent = "Отправляем...";
 
-      try {
-        const resp = await fetch(SCRIPT_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data)
-        });
+    const data = {
+      name: form.name.value.trim(),
+      phone: form.phone.value.trim(),
+      email: form.email.value.trim(),
+      message: form.message.value.trim()
+    };
 
-        if (!resp.ok) throw new Error("Bad response");
+    try {
+      const resp = await fetch(SCRIPT_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
 
-        alert("Спасибо! Заявка отправлена в Telegram. Мы свяжемся с вами.");
-        form.reset();
-      } catch (err) {
-        alert("Не удалось отправить заявку. Попробуйте ещё раз.");
-        console.error(err);
-      }
-    });
-  }
+      if (!resp.ok) throw new Error("Bad response from server");
+
+      statusEl.textContent = "✅ Готово! Заявка отправлена в Telegram.";
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      statusEl.textContent = "❌ Не удалось отправить. Попробуйте ещё раз.";
+    }
+  });
 </script>
 
 </body>
