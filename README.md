@@ -8,7 +8,6 @@
   <style>
     :root{
       --bg:#0b1220;
-      --card:#111a2e;
       --text:#e8eefc;
       --muted:#a8b3d6;
       --accent:#ff7a18;
@@ -37,13 +36,9 @@
     }
     .nav{
       display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0;
-      gap:14px;
+      padding:14px 0; gap:14px;
     }
-    .brand{
-      display:flex; align-items:center; gap:12px;
-      min-width: 220px;
-    }
+    .brand{display:flex; align-items:center; gap:12px; min-width:220px;}
     .logo{
       width:40px; height:40px; border-radius:12px;
       background: linear-gradient(135deg, rgba(255,122,24,.95), rgba(45,212,191,.9));
@@ -93,8 +88,8 @@
     }
     @media (max-width: 900px){
       .hero-grid{grid-template-columns:1fr}
-      .brand{min-width:auto}
       .menu{display:none}
+      .brand{min-width:auto}
     }
     .hero-card{
       background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
@@ -127,16 +122,11 @@
     @media (max-width: 520px){ h1{font-size:34px} }
     .lead{color:var(--muted); font-size:16px; margin:0 0 18px; max-width: 62ch}
     .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
-    .stats{
-      display:grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap:12px;
-      margin-top:18px;
-    }
+    .stats{display:grid; grid-template-columns: repeat(2, 1fr); gap:12px; margin-top:18px;}
     .stat{
       background: rgba(255,255,255,.03);
       border:1px solid var(--border);
-      border-radius: 16px;
+      border-radius:16px;
       padding:14px;
     }
     .stat .num{font-weight:950; font-size:20px}
@@ -167,11 +157,7 @@
       display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
       margin-bottom:18px;
     }
-    .section-title h2{
-      margin:0;
-      font-size:28px;
-      letter-spacing:-.3px;
-    }
+    .section-title h2{margin:0; font-size:28px; letter-spacing:-.3px;}
     .section-title p{margin:0; color:var(--muted); max-width: 62ch}
     .steps{display:grid; grid-template-columns: repeat(4, 1fr); gap:14px;}
     @media (max-width: 900px){ .steps{grid-template-columns:1fr} }
@@ -200,10 +186,7 @@
     }
     .step h4{margin:0 0 8px; font-size:16px}
     .step p{margin:0; color:var(--muted)}
-    .contact-grid{
-      display:grid; grid-template-columns: 1fr 1fr; gap:14px;
-      align-items:start;
-    }
+    .contact-grid{display:grid; grid-template-columns: 1fr 1fr; gap:14px; align-items:start;}
     @media (max-width: 900px){ .contact-grid{grid-template-columns:1fr} }
     form{display:grid; gap:10px; margin-top:10px;}
     input, textarea{
@@ -303,6 +286,7 @@
               <li>Сопровождение и консультации по найму</li>
             </ul>
           </div>
+
           <div class="panel">
             <h3>Контакты</h3>
             <ul class="list">
@@ -480,7 +464,7 @@
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
 
-  const SCRIPT_URL = "https://docs.google.com/spreadsheets/d/1BNn8uSmnV626zGfeBUfRbRTrY1fqpzjRiYl3ZrOxvRk/edit?usp=sharing";
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzIkFId0ivjrZjrlU9rI7OEYXjN2AuDTiIhW5oqMgt-MOdHWrsoPIJe-tAtgKGW9It9IQ/exec";
 
   const form = document.getElementById("leadForm");
   const statusEl = document.getElementById("formStatus");
@@ -503,7 +487,7 @@
         body: JSON.stringify(data)
       });
 
-      if (!resp.ok) throw new Error("Bad response from server");
+      if (!resp.ok) throw new Error("HTTP error: " + resp.status);
 
       statusEl.textContent = "✅ Готово! Заявка отправлена в Telegram.";
       form.reset();
@@ -513,28 +497,6 @@
     }
   });
 </script>
-<section id="requisites">
-  <div class="container">
-    <div class="section-title">
-      <div>
-        <h2>Реквизиты</h2>
-        <p>Для заключения договора и выставления документов.</p>
-      </div>
-    </div>
 
-    <div class="panel">
-      <ul class="list" style="margin:0;">
-        <li><b>ООО / ИП (укажите):</b> __________________</li>
-        <li><b>Юридический адрес:</b> __________________</li>
-        <li><b>ИНН / КПП:</b> __________________</li>
-        <li><b>ОГРН / ОГРНИП:</b> __________________</li>
-        <li><b>Расчётный счёт:</b> __________________</li>
-        <li><b>Банк:</b> __________________</li>
-        <li><b>Корр. счёт / БИК:</b> __________________</li>
-      </ul>
-      <p class="fineprint">Заполните реквизиты в коде (или скажите мне — я внесу точный текст).</p>
-  
-  </div>
-</section>
 </body>
 </html>
