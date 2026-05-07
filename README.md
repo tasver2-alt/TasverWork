@@ -470,13 +470,11 @@
 
         <div class="panel">
           <h3>Оставить заявку</h3>
-          <!-- ВНИМАНИЕ: форма пока просто “демо”. Ниже дам как сделать отправку на email/Telegram -->
-           <form id="leadForm">
+          <form id="leadForm">
   <input type="text" name="name" placeholder="Ваше имя" required>
   <input type="tel" name="phone" placeholder="Телефон / WhatsApp" required>
   <input type="email" name="email" placeholder="Email (необязательно)">
   <textarea name="message" placeholder="Сообщение: вакансия или ваши данные (опыт, должность, график)..." required></textarea>
-
   <button class="btn btn-accent" type="submit">Отправить</button>
   <div class="fineprint">Нажимая “Отправить”, вы даёте согласие на обработку данных.</div>
 </form>
