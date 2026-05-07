@@ -426,21 +426,23 @@
       </div>
 
       <div class="panel">
-        <!-- ВАЖНО: ниже реквизиты стоят как шаблон. Вы пришлите свои реальные данные — я сразу подставлю. -->
         <table aria-label="Реквизиты">
           <tr><th>Наименование</th><td>TASVER (кадровое агентство)</td></tr>
-          <tr><th>Юридический адрес</th><td>Москва, (впишите адрес)</td></tr>
-          <tr><th>ИНН</th><td>(впишите ИНН)</td></tr>
-          <tr><th>КПП</th><td>(впишите КПП)</td></tr>
-          <tr><th>ОГРН / ОГРНИП</th><td>(впишите ОГРН/ОГРНИП)</td></tr>
-          <tr><th>Расчётный счёт</th><td>(впишите расчётный счёт)</td></tr>
-          <tr><th>Банк</th><td>(впишите банк)</td></tr>
-          <tr><th>Корр. счёт</th><td>(впишите кор. счёт)</td></tr>
-          <tr><th>БИК</th><td>(впишите БИК)</td></tr>
-          <tr><th>Контакты</th><td>
-            Тел.: <a href="tel:+79166661266"><b>+7 (916) 666-12-66</b></a><br/>
-            Email: <a href="mailto:tasver@tasver.ru"><b>tasver@tasver.ru</b></a>
-          </td></tr>
+          <tr><th>Юридический адрес</th><td>г. Москва, Варшавское шоссе, влд. 132/2</td></tr>
+          <tr><th>ИНН</th><td>770171269799</td></tr>
+          <tr><th>КПП</th><td>—</td></tr>
+          <tr><th>ОГРН / ОГРНИП</th><td>316774600133130</td></tr>
+          <tr><th>Расчётный счёт</th><td>40802810600000130574</td></tr>
+          <tr><th>Банк</th><td>ПАО «Промсвязьбанк», г. Москва</td></tr>
+          <tr><th>Корр. счёт</th><td>30101810400000000555</td></tr>
+          <tr><th>БИК</th><td>044525555</td></tr>
+          <tr>
+            <th>Контакты</th>
+            <td>
+              Тел.: <a href="tel:+79166661266"><b>+7 (916) 666-12-66</b></a><br/>
+              Email: <a href="mailto:tasver@tasver.ru"><b>tasver@tasver.ru</b></a>
+            </td>
+          </tr>
         </table>
 
         <div class="small-muted">
@@ -467,23 +469,22 @@
             <li><b>Город:</b> Москва</li>
             <li><b>Телефон:</b> <a href="tel:+79166661266">+7 (916) 666-12-66</a></li>
             <li><b>Email:</b> <a href="mailto:tasver@tasver.ru">tasver@tasver.ru</a></li>
-            <div style="margin-top:14px; padding-top:14px; border-top:1px solid rgba(255,255,255,.10);">
-  </ul>
-  <div style="margin-top:14px; padding-top:14px; border-top:1px solid rgba(255,255,255,.10);">
-  <h3 style="margin:0 0 10px; font-size:16px;">Реквизиты</h3>
-  <ul class="list">
-    <li><b>ИП:</b> Лебединский Павел Павлович</li>
-    <li><b>Адрес:</b> г. Москва, Варшавское шоссе, влд. 132/2</li>
-    <li><b>ИНН:</b> 770171269799</li>
-    <li><b>ОГРНИП:</b> 316774600133130</li>
-    <li><b>р/с:</b> 40802810600000130574</li>
-    <li><b>Банк:</b> ПАО «Промсвязьбанк», г. Москва</li>
-    <li><b>БИК:</b> 044525555</li>
-    <li><b>к/с:</b> 30101810400000000555</li>
-  </ul>
-</div>
-</div>
           </ul>
+
+          <div style="margin-top:14px; padding-top:14px; border-top:1px solid rgba(255,255,255,.10);">
+            <h3 style="margin:0 0 10px; font-size:16px;">Реквизиты</h3>
+            <ul class="list">
+              <li><b>ИП:</b> Лебединский Павел Павлович</li>
+              <li><b>Адрес:</b> г. Москва, Варшавское шоссе, влд. 132/2</li>
+              <li><b>ИНН:</b> 770171269799</li>
+              <li><b>ОГРНИП:</b> 316774600133130</li>
+              <li><b>р/с:</b> 40802810600000130574</li>
+              <li><b>Банк:</b> ПАО «Промсвязьбанк», г. Москва</li>
+              <li><b>БИК:</b> 044525555</li>
+              <li><b>к/с:</b> 30101810400000000555</li>
+            </ul>
+          </div>
+
           <p class="fineprint">Можете написать нам в удобное время. Ответим максимально быстро.</p>
         </div>
 
@@ -525,11 +526,12 @@
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    const elements = form.elements;
     const data = {
-      name: form.name.value.trim(),
-      phone: form.phone.value.trim(),
-      email: form.email.value.trim(),
-      message: form.message.value.trim()
+      name: elements.namedItem("name").value.trim(),
+      phone: elements.namedItem("phone").value.trim(),
+      email: elements.namedItem("email").value.trim(),
+      message: elements.namedItem("message").value.trim()
     };
 
     try {
