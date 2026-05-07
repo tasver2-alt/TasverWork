@@ -415,23 +415,6 @@
     </div>
   </section>
 
-  <!-- REQUISITES -->
-  <section id="requisites">
-    <div class="container">
-      <div class="section-title">
-        <div>
-          <h2>Реквизиты</h2>
-          <p>Реквизиты для выставления документов и заключения договоров.</p>
-        </div>
-      </div>
-
-        <div class="small-muted">
-          Заполните реквизиты в коде на основе ваших данных (я могу сделать это за вас).
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- CONTACTS -->
   <section id="contacts">
     <div class="container">
