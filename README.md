@@ -471,7 +471,47 @@
         <div class="panel">
           <h3>Оставить заявку</h3>
           <!-- ВНИМАНИЕ: форма пока просто “демо”. Ниже дам как сделать отправку на email/Telegram -->
-          <form onsubmit="event.preventDefault(); alert('Спасибо! Заявка создана. Мы свяжемся с вами по указанным контактам.');">
+           <form id="leadForm">
+  <input type="text" name="name" placeholder="Ваше имя" required>
+  <input type="tel" name="phone" placeholder="Телефон / WhatsApp" required>
+  <input type="email" name="email" placeholder="Email (необязательно)">
+  <textarea name="message" placeholder="Сообщение: вакансия или ваши данные (опыт, должность, график)..." required></textarea>
+
+  <button class="btn btn-accent" type="submit">Отправить</button>
+  <div class="fineprint">Нажимая “Отправить”, вы даёте согласие на обработку данных.</div>
+</form>
+
+<script>
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzIkFId0ivjrZjrlU9rI7OEYXjN2AuDTiIhW5oqMgt-MOdHWrsoPIJe-tAtgKGW9It9IQ/exec";
+
+  document.getElementById("leadForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = {
+      name: form.name.value.trim(),
+      phone: form.phone.value.trim(),
+      email: form.email.value.trim(),
+      message: form.message.value.trim()
+    };
+
+    try {
+      const resp = await fetch(SCRIPT_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      if (!resp.ok) throw new Error("Bad response");
+
+      alert("Спасибо! Заявка отправлена в Telegram. Мы свяжемся с вами.");
+      form.reset();
+    } catch (err) {
+      alert("Не удалось отправить заявку. Попробуйте ещё раз.");
+      console.error(err);
+    }
+  });
+</script>
             <input type="text" name="name" placeholder="Ваше имя" required>
             <input type="tel" name="phone" placeholder="Телефон / WhatsApp" required>
             <input type="email" name="email" placeholder="Email (необязательно)">
