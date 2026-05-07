@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TASVER — кадровое агентство (Москва)</title>
+  <title>TASVERWORK — кадровое агентство (Москва)</title>
   <meta name="description" content="TASVER — подбор персонала для работодателей и трудоустройство для соискателей в Москве." />
   <style>
     :root{
@@ -480,7 +480,7 @@
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
 
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzIkFId0ivjrZjrlU9rI7OEYXjN2AuDTiIhW5oqMgt-MOdHWrsoPIJe-tAtgKGW9It9IQ/exec";
+  const SCRIPT_URL = "https://docs.google.com/spreadsheets/d/1BNn8uSmnV626zGfeBUfRbRTrY1fqpzjRiYl3ZrOxvRk/edit?usp=sharing";
 
   const form = document.getElementById("leadForm");
   const statusEl = document.getElementById("formStatus");
@@ -513,6 +513,28 @@
     }
   });
 </script>
+<section id="requisites">
+  <div class="container">
+    <div class="section-title">
+      <div>
+        <h2>Реквизиты</h2>
+        <p>Для заключения договора и выставления документов.</p>
+      </div>
+    </div>
 
+    <div class="panel">
+      <ul class="list" style="margin:0;">
+        <li><b>ООО / ИП (укажите):</b> __________________</li>
+        <li><b>Юридический адрес:</b> __________________</li>
+        <li><b>ИНН / КПП:</b> __________________</li>
+        <li><b>ОГРН / ОГРНИП:</b> __________________</li>
+        <li><b>Расчётный счёт:</b> __________________</li>
+        <li><b>Банк:</b> __________________</li>
+        <li><b>Корр. счёт / БИК:</b> __________________</li>
+      </ul>
+      <p class="fineprint">Заполните реквизиты в коде (или скажите мне — я внесу точный текст).</p>
+    </div>
+  </div>
+</section>
 </body>
 </html>
