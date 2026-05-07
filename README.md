@@ -468,6 +468,8 @@
             <li><b>Телефон:</b> <a href="tel:+79166661266">+7 (916) 666-12-66</a></li>
             <li><b>Email:</b> <a href="mailto:tasver@tasver.ru">tasver@tasver.ru</a></li>
             <div style="margin-top:14px; padding-top:14px; border-top:1px solid rgba(255,255,255,.10);">
+  </ul>
+  <div style="margin-top:14px; padding-top:14px; border-top:1px solid rgba(255,255,255,.10);">
   <h3 style="margin:0 0 10px; font-size:16px;">Реквизиты</h3>
   <ul class="list">
     <li><b>ИП:</b> Лебединский Павел Павлович</li>
@@ -479,6 +481,7 @@
     <li><b>БИК:</b> 044525555</li>
     <li><b>к/с:</b> 30101810400000000555</li>
   </ul>
+</div>
 </div>
           </ul>
           <p class="fineprint">Можете написать нам в удобное время. Ответим максимально быстро.</p>
